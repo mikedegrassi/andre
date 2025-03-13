@@ -2,9 +2,12 @@
 	<div class="content">
 		<h2>Werkervaring</h2>
 		<p>Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam
-			aenean mi ligula Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam
-			aenean mi ligula Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam
-			aenean mi ligula Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam
+			aenean mi ligula Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend
+			fringilla nullam
+			aenean mi ligula Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend
+			fringilla nullam
+			aenean mi ligula Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend
+			fringilla nullam
 			aenean mi ligula</p>
 	</div>
 
@@ -24,45 +27,67 @@
 <section class="spotlight2">
 	<div class="content">
 		<h2>"Goedadigheidswerk"</h2>
-		<p>Aliquam ut ex ut augue consectetur interdum...</p>
+		<p style="font-size: 1.2em;
+		color: #777;
+		margin-bottom: 40px;">Klik op de afbeeldingen voor meer informatie</p>
 	</div>
+
+	<section class="photo-gallery">
+		<div class="photos">
+			<div class="photo-card" onclick="openInfo('info1')">
+			  <img src="images/placeholder01.png" alt="Foto 1">
+			  <div class="overlay">
+				<p>Foto 1</p>
+			  </div>
+			</div>
+		  
+			<div class="photo-card" onclick="openInfo('info2')">
+			  <img src="images/placeholder02.png" alt="Foto 2">
+			  <div class="overlay">
+				<p>Foto 2</p>
+			  </div>
+			</div>
+		  
+			<div class="photo-card" onclick="openInfo('info3')">
+			  <img src="images/placeholder03.png" alt="Foto 3">
+			  <div class="overlay">
+				<p>Foto 3</p>
+			  </div>
+			</div>
+		  </div>
+		  
+
+		<!-- Panels -->
+		<div class="info-panel" id="info1">
+			<h2>Foto 1</h2>
+			<div class="info-image">
+				<img src="images/pic01.jpg" alt="Foto 1">
+			</div>
+			<p>Meer informatie over afbeelding 1...</p>
+			<button class="close-button-bottom" onclick="closeInfo()">Sluiten</button>
+		</div>
+
+		<div class="info-panel" id="info2">
+			<h2>Foto 2</h2>
+			<div class="info-image">
+				<img src="images/pic02.jpg" alt="Foto 2">
+			</div>
+			<p>Meer informatie over afbeelding 2...</p>
+			<button class="close-button-bottom" onclick="closeInfo()">Sluiten</button>
+		</div>
+
+		<div class="info-panel" id="info3">
+			<h2>Foto 3</h2>
+			<div class="info-image">
+				<img src="images/pic03.jpg" alt="Foto 3">
+			</div>
+			<p>Meer informatie over afbeelding 3...</p>
+			<button class="close-button-bottom" onclick="closeInfo()">Sluiten</button>
+		</div>
+	</section>
 </section>
 
-<section class="photo-gallery">
-	<div class="photos">
-		<img src="images/pic01.jpg" alt="Foto 1" onclick="openInfo('info1')">
-		<img src="images/pic02.jpg" alt="Foto 2" onclick="openInfo('info2')">
-		<img src="images/pic03.jpg" alt="Foto 3" onclick="openInfo('info3')">
-	</div>
 
-	<!-- Panels -->
-	<div class="info-panel" id="info1">
-		<h2>Foto 1</h2>
-		<div class="info-image">
-			<img src="images/pic01.jpg" alt="Foto 1">
-		</div>
-		<p>Meer informatie over afbeelding 1...</p>
-		<button class="close-button-bottom" onclick="closeInfo()">Sluiten</button>
-	</div>
-
-	<div class="info-panel" id="info2">
-		<h2>Foto 2</h2>
-		<div class="info-image">
-			<img src="images/pic02.jpg" alt="Foto 2">
-		</div>
-		<p>Meer informatie over afbeelding 2...</p>
-		<button class="close-button-bottom" onclick="closeInfo()">Sluiten</button>
-	</div>
-
-	<div class="info-panel" id="info3">
-		<h2>Foto 3</h2>
-		<div class="info-image">
-			<img src="images/pic03.jpg" alt="Foto 3">
-		</div>
-		<p>Meer informatie over afbeelding 3...</p>
-		<button class="close-button-bottom" onclick="closeInfo()">Sluiten</button>
-	</div>
-</section>
 
 <section class="treatments-section">
 	<div class="section-header">
@@ -133,11 +158,15 @@
 				</div>
 				<div class="review">
 					<h4>Geweldige ervaring en genezen van mijn blessures</h4>
-					<p>“ I was an EMT for many years before I joined the bootcamp. I’ve been looking to make a
-						transition and have heard some people who had an amazing experience here. I signed up for the
-						free intro course and found it incredibly fun! I enrolled shortly thereafter. The next 12 weeks
-						was the best - and most grueling - time of my life. Since completing the course, I’ve
-						successfully switched careers, working as a Software Engineer at a VR startup. ”</p>
+					<p>Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla
+						nullam
+						aenean mi ligula Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris
+						eleifend fringilla nullam
+						aenean mi ligula Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris
+						eleifend fringilla nullam
+						aenean mi ligula Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris
+						eleifend fringilla nullam
+						aenean mi ligula</p>
 				</div>
 			</div>
 
@@ -150,8 +179,11 @@
 				</div>
 				<div class="review">
 					<h4>The team was very supportive and kept me motivated</h4>
-					<p>“ I started as a total newbie with virtually no coding skills. I now work as a mobile engineer
-						for a big company. This was one of the best investments I’ve made in myself. ”</p>
+					<p>Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla
+						nullam
+						aenean mi ligula Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris
+						eleifend fringilla nullam
+						aenean mi ligula</p>
 				</div>
 			</div>
 
@@ -164,14 +196,15 @@
 				</div>
 				<div class="review dark">
 					<h4>Such a life-changing experience. Highly recommended!</h4>
-					<p>“ Before joining the bootcamp, I’ve never written a line of code. I needed some structure from
-						professionals who can help me learn programming step by step. I was encouraged to enroll by a
-						former student of theirs who can only say wonderful things about the program. The entire
-						curriculum and staff did not disappoint. They were very hands-on and I never had to wait long
-						for assistance. The agile team project, in particular, was outstanding. It took my learning to
-						the next level in a way that no tutorial could ever have. In fact, I’ve often referred to it
-						during interviews as an example of experience. It certainly helped me land a job as a full-stack
-						100% recommend! ”</p>
+					<p>Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla
+						nullam
+						aenean mi ligula Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris
+						eleifend fringilla nullam
+						aenean mi ligula Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris
+						eleifend fringilla nullam
+						aenean mi ligula Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris
+						eleifend fringilla nullam
+						aenean mi ligula</p>
 				</div>
 			</div>
 
@@ -184,8 +217,9 @@
 				</div>
 				<div class="review dark">
 					<h4>An overall wonderful and rewarding experience</h4>
-					<p>“ Thank you for the wonderful experience! I now have a job I really enjoy, and make a good living
-						while doing something I love. ”</p>
+					<p>Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla
+						nullam
+						aenean mi ligula </p>
 				</div>
 			</div>
 
@@ -198,10 +232,15 @@
 				</div>
 				<div class="review">
 					<h4>Awesome teaching support from TAs who did the bootcamp themselves</h4>
-					<p>“ The staff seem genuinely concerned about my progress which I find really refreshing. The
-						program gave me the confidence necessary to be able to go out in the world and present myself as
-						a capable junior developer. The standard is above the rest. You will get the personal attention
-						you need from an incredible community of smart and amazing people. ”</p>
+					<p>Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla
+						nullam
+						aenean mi ligula Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris
+						eleifend fringilla nullam
+						aenean mi ligula Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris
+						eleifend fringilla nullam
+						aenean mi ligula Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris
+						eleifend fringilla nullam
+						aenean mi ligula</p>
 				</div>
 			</div>
 

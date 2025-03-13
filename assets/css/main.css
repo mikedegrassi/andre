@@ -2982,7 +2982,7 @@ body {
 		font-size: 14px;
 		border: 2px solid white;
 		padding: 5px 10px;
-	}	  
+	}
 
 	.description-text {
 		color: black;
@@ -3240,13 +3240,6 @@ body {
 	max-width: 800px;
 }
 
-.spotlight2:nth-child(2n) {
-	-moz-flex-direction: row-reverse;
-	-webkit-flex-direction: row-reverse;
-	-ms-flex-direction: row-reverse;
-	flex-direction: row-reverse;
-}
-
 /* Responsive: breekpunten */
 @media screen and (max-width: 1280px) {
 
@@ -3283,7 +3276,7 @@ body {
 @media screen and (max-width: 736px) {
 
 	.spotlight2 .content {
-		padding: 3em 2em 1em 2em;
+		padding: 3em 0 1em 0;
 	}
 
 }
@@ -3310,20 +3303,57 @@ body {
 	display: flex;
 	justify-content: center;
 	gap: 20px;
-	padding: 20px;
-	overflow-x: auto;
+	flex-wrap: wrap;
 }
 
-.photos img {
+.photo-card {
+	position: relative;
+	width: 250px;
 	height: 200px;
+	overflow: hidden;
 	cursor: pointer;
-	transition: transform 0.3s;
-	border-radius: 15px;
+	border-radius: 8px;
+	transition: transform 0.3s ease;
 }
 
-.photos img:hover {
+.photo-card:hover {
 	transform: scale(1.05);
 }
+
+.photo-card img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+}
+
+.photo-card .overlay {
+	position: absolute;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.6);
+	/* standaard donker */
+	color: #fff;
+	width: 100%;
+	text-align: center;
+	padding: 10px 0;
+	transition: background 0.3s ease, opacity 0.3s ease;
+	/* zorgt voor de fade */
+	opacity: 1;
+}
+
+.photo-card:hover .overlay {
+	background: rgba(0, 0, 0, 0.8);
+	/* donkerder bij hover */
+	opacity: 1;
+	/* Als je een fade wilt, maar het is altijd zichtbaar */
+}
+
+.overlay>p {
+	margin: 0;
+	padding: 10px;
+}
+
+
 
 /* Info panel basis */
 .info-panel {
@@ -4934,7 +4964,7 @@ body.is-mobile #main>header {
 /* Footer */
 
 #footer {
-	padding: 6em 0 4em 0;
+	padding: 3em 0 4em 0;
 	text-align: center;
 }
 
@@ -4996,7 +5026,7 @@ body.is-mobile #main>header {
 @media screen and (max-width: 980px) {
 
 	#footer {
-		padding: 4em 3em 2em 3em;
+		padding: 2em;
 	}
 
 }
@@ -5004,7 +5034,7 @@ body.is-mobile #main>header {
 @media screen and (max-width: 736px) {
 
 	#footer {
-		padding: 3em 2em 1em 2em;
+		padding: 1.5em;
 	}
 
 }
