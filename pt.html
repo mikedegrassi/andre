@@ -35,10 +35,28 @@
 
 	<section class="photo-gallery">
 		<div class="photos">
-			<img src="images/pic01.jpg" alt="Foto 1" onclick="openInfo('info1')">
-			<img src="images/pic02.jpg" alt="Foto 2" onclick="openInfo('info2')">
-			<img src="images/pic03.jpg" alt="Foto 3" onclick="openInfo('info3')">
-		</div>
+			<div class="photo-card" onclick="openInfo('info1')">
+			  <img src="images/placeholder01.png" alt="Foto 1">
+			  <div class="overlay">
+				<p>Foto 1</p>
+			  </div>
+			</div>
+		  
+			<div class="photo-card" onclick="openInfo('info2')">
+			  <img src="images/placeholder02.png" alt="Foto 2">
+			  <div class="overlay">
+				<p>Foto 2</p>
+			  </div>
+			</div>
+		  
+			<div class="photo-card" onclick="openInfo('info3')">
+			  <img src="images/placeholder03.png" alt="Foto 3">
+			  <div class="overlay">
+				<p>Foto 3</p>
+			  </div>
+			</div>
+		  </div>
+		  
 
 		<!-- Panels -->
 		<div class="info-panel" id="info1">
