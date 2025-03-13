@@ -1,0 +1,323 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+	<title>Rapunt</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+	<!-- Spectral CSS -->
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" />
+	</noscript>
+
+	<!-- Extra CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.3/css/foundation.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+	<link rel="stylesheet" href="public/css/style.css?v=1.0.3">
+
+
+	<!-- Jouw eigen CSS -->
+	<link rel="stylesheet" href="public/css/style.css">
+</head>
+
+<body class="landing is-preload">
+
+	<!-- Page Wrapper -->
+	<div id="page-wrapper">
+
+		<!-- Banner -->
+		<section id="banner" class="custom-banner" style="background-color: #EDF2F8;">
+
+			<!-- Logo Text -->
+			<div id="logoText" class="logo-text"></div>
+
+			<!-- Description Text -->
+			<div id="descriptionText" class="description-text"></div>
+
+			<button class="close-btn" onclick="resetBanner()">
+				<i class="fa-solid fa-xmark"></i>
+			</button>
+
+			<!-- Banner Container -->
+			<div class="banner-container">
+				<button class="close-btn" onclick="resetBanner()">
+					<i class="fa-solid fa-xmark"></i>
+				</button>
+
+				<div class="banner-img left-img"
+					onclick="makeMainBanner('left-img', 'Massage', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'); loadContent('massage.html');">
+					<img id="leftImage" src="./assets/css/images/massage.png" alt="Left Image">
+					<div class="photo-text photo-text-left">
+						<h2>Massage</h2>
+					</div>
+				</div>
+
+				<div class="banner-img right-img"
+					onclick="makeMainBanner('right-img', 'Personal Training', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'); loadContent('pt.html');">
+					<img id="rightImage" src="./assets/css/images/pt.png" alt="Right Image">
+					<div class="photo-text photo-text-right">
+						<h2>Personal Training</h2>
+					</div>
+				</div>
+			</div>
+
+			<div id="scrollIndicator" class="scroll-indicator">
+				<span>Scroll</span>
+				<i class="fa-solid fa-chevron-down"></i>
+			</div>
+		</section>
+
+		<div id="dynamic-content"></div>
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+		<!-- Foundation JS -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.3/js/foundation.min.js"></script>
+		<script>
+			$(document).foundation();
+
+			window.onload = function () {
+				document.documentElement.classList.add('no-scroll');
+				document.body.classList.add('no-scroll');
+			};
+
+			function makeMainBanner(imgClass, logoText, descriptionText) {
+				const element = document.querySelector(`.${imgClass}`);
+
+				if (window.innerWidth <= 768) {
+					if (imgClass === 'right-img') {
+						document.querySelector('.banner-container').classList.add('shift-up');
+					}
+				}
+
+				document.querySelectorAll('.banner-img').forEach(img => {
+					img.style.pointerEvents = 'none';
+					if (!img.classList.contains(imgClass)) {
+						if (imgClass === 'left-img') {
+							img.classList.add('hidden-down');
+						} else {
+							img.classList.add('hidden-up');
+						}
+						img.style.zIndex = '1';
+					} else {
+						img.classList.add('full-width');
+						img.style.zIndex = '0';
+					}
+					img.querySelector('.photo-text').style.opacity = '0';
+
+					document.documentElement.classList.remove('no-scroll');
+					document.body.classList.remove('no-scroll');
+				});
+
+				document.querySelector('.close-btn').style.display = 'block';
+
+				setTimeout(() => {
+					document.querySelectorAll('.banner-img').forEach(img => {
+						img.style.pointerEvents = '';
+					});
+				}, 2000);
+
+				const logoElement = document.getElementById('logoText');
+				logoElement.textContent = logoText;
+				logoElement.style.opacity = '1';
+				logoElement.style.transform = 'translateY(0)';
+
+				const descElement = document.getElementById('descriptionText');
+				descElement.textContent = descriptionText;
+				descElement.style.opacity = '1';
+				descElement.style.transform = 'translateY(0)';
+
+				const scrollIndicator = document.getElementById('scrollIndicator');
+				scrollIndicator.style.display = 'flex';
+			}
+
+			function resetBanner() {
+				const banner = document.querySelectorAll('.banner-img');
+				const left = document.querySelector('.left-img');
+				const right = document.querySelector('.right-img');
+
+				banner.forEach(img => {
+					// Reset styles
+					img.style.pointerEvents = 'none';
+					img.classList.remove('hidden-up', 'hidden-down', 'full-width', 'faded-up', 'faded-down');
+
+					// Reset display & opacity
+					img.style.display = 'block';
+					img.querySelector('.photo-text').style.opacity = '1';
+
+					// Optional: force reflow if animations fail
+					void img.offsetWidth;
+
+					// Re-enable pointer events after animation (or instantly)
+					setTimeout(() => {
+						img.style.pointerEvents = '';
+					}, 200);
+
+					document.documentElement.classList.add('no-scroll');
+					document.body.classList.add('no-scroll');
+
+					window.scrollTo({ top: 0, behavior: 'instant' });
+				});
+
+				// Hide close button
+				document.querySelectorAll('.close-btn').forEach(btn => btn.style.display = 'none');
+
+				// Reset logo and description text
+				const logoElement = document.getElementById('logoText');
+				logoElement.style.opacity = '0';
+				logoElement.style.transform = 'translateY(-20px)';
+
+				const descElement = document.getElementById('descriptionText');
+				descElement.style.opacity = '0';
+				descElement.style.transform = 'translateY(-20px)';
+
+				// Hide scroll indicator
+				const scrollIndicator = document.getElementById('scrollIndicator');
+				scrollIndicator.style.display = 'none';
+
+				// Always remove shift-up class
+				document.querySelector('.banner-container').classList.remove('shift-up');
+			}
+
+
+			function animateImagesOnLoad() {
+				document.querySelector('.left-img').classList.add('slide-left');
+				document.querySelector('.right-img').classList.add('slide-right');
+			}
+
+			document.addEventListener('scroll', function () {
+				const descriptionText = document.getElementById('descriptionText');
+				const scrollIndicator = document.getElementById('scrollIndicator');
+				const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+
+				if (scrollPosition > 10) {
+					descriptionText.classList.add('no-blur');
+					scrollIndicator.style.display = 'none'; // 🔥 VERSTOP HEM!
+				} else {
+					descriptionText.classList.remove('no-blur');
+					scrollIndicator.style.display = 'flex'; // 🔥 LAAT HEM TERUGKOMEN!
+				}
+			});
+
+
+			function loadContent(page) {
+				fetch(page)
+					.then(response => {
+						if (!response.ok) {
+							throw new Error("Network response was not ok");
+						}
+						return response.text();
+					})
+					.then(html => {
+						const container = document.getElementById("dynamic-content");
+						container.innerHTML = html;
+
+						// Init scripts opnieuw voor dynamisch geladen content
+						initCarousel();
+					})
+					.catch(error => {
+						console.error("Er is een fout opgetreden bij het laden van de content:", error);
+					});
+			}
+
+
+
+			// Trigger animation on load
+			window.onload = animateImagesOnLoad;
+		</script>
+
+		<script>
+			let counter = 1;
+
+			function openTreatmentInfo(panelId) {
+				closeTreatmentInfo();
+				const panel = document.getElementById(panelId);
+				if (panel) {
+					panel.classList.add('active');
+				}
+			}
+
+			function closeTreatmentInfo() {
+				const panels = document.querySelectorAll('.treatment-info-panel');
+				panels.forEach(panel => panel.classList.remove('active'));
+			}
+
+			function openInfo(panelId) {
+				const panels = document.querySelectorAll('.info-panel');
+				panels.forEach(panel => panel.classList.remove('active'));
+
+				const panel = document.getElementById(panelId);
+				if (panel) {
+					panel.classList.add('active');
+				}
+			}
+
+			function closeInfo() {
+				const panels = document.querySelectorAll('.info-panel');
+				panels.forEach(panel => panel.classList.remove('active'));
+			}
+
+			function updateSize() {
+				const slideImage = document.querySelector('.carousel-slide img');
+				return slideImage ? slideImage.clientWidth : 0;
+			}
+
+			function showSlide() {
+				let size = updateSize();
+				const slide = document.querySelector('.carousel-slide');
+				if (slide) {
+					slide.style.transition = 'transform 0.5s ease-in-out';
+					slide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+				}
+			}
+
+			function moveNext() {
+				counter++;
+				showSlide();
+			}
+
+			function initCarousel() {
+				const slide = document.querySelector('.carousel-slide');
+				const images = document.querySelectorAll('.carousel-slide img');
+
+				if (!slide || images.length === 0) return;
+
+				slide.addEventListener('transitionend', () => {
+					let size = updateSize();
+
+					if (images[counter].alt.includes('Slide 1 (Clone)')) {
+						slide.style.transition = 'none';
+						counter = 1;
+						slide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+					}
+
+					if (images[counter].alt.includes('Slide 3 (Clone)')) {
+						slide.style.transition = 'none';
+						counter = images.length - 2;
+						slide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+					}
+				});
+
+				window.addEventListener('resize', showSlide);
+				showSlide();
+
+				setInterval(moveNext, 3000);
+			}
+
+		</script>
+
+
+</body>
+
+</html>

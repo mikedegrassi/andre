@@ -1,0 +1,327 @@
+<section class="spotlight">
+	<div class="content">
+		<h2>uragiuarguaeugheis</h2>
+		<p>Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam
+			aenean mi ligula. Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet.
+			Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam
+			aenean mi ligula. Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. </p>
+	</div>
+
+	<div class="image">
+		<div class="carousel-container">
+			<div class="carousel-slide">
+				<!-- Clone van laatste afbeelding voor seamless scroll -->
+				<img src="images/placeholder03.png" alt="Slide 3 (Clone)">
+
+				<!-- Echte slides -->
+				<img src="images/placeholder01.png" alt="Slide 1">
+				<img src="images/placeholder02.png" alt="Slide 2">
+				<img src="images/placeholder03.png" alt="Slide 3">
+
+				<!-- Clone van eerste afbeelding voor seamless scroll -->
+				<img src="images/placeholder01.png" alt="Slide 1 (Clone)">
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="spotlight2">
+	<div class="content">
+		<h2>"Goedadigheidswerk"</h2>
+		<p>Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam
+			aenean mi ligula. Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris
+			eleifend fringilla nullam
+			aenean mi ligula.</p>
+	</div>
+</section>
+
+<section class="photo-gallery">
+	<div class="photos">
+		<img src="images/pic01.jpg" alt="Foto 1" onclick="openInfo('info1')">
+		<img src="images/pic02.jpg" alt="Foto 2" onclick="openInfo('info2')">
+		<img src="images/pic03.jpg" alt="Foto 3" onclick="openInfo('info3')">
+	</div>
+
+	<!-- Panel 1 -->
+	<div class="info-panel" id="info1">
+		<button class="close-btn" onclick="closeInfo()">✖</button>
+		<h2>Foto 1</h2>
+		<div class="info-image">
+			<img src="images/pic01.jpg" alt="Foto 1">
+		</div>
+		<p>Meer informatie over afbeelding 1. Dit kan een korte uitleg zijn over waar de foto over gaat.</p>
+		<button class="close-button-bottom" onclick="closeInfo()">Sluiten</button>
+	</div>
+
+	<!-- Panel 2 -->
+	<div class="info-panel" id="info2">
+		<button class="close-btn" onclick="closeInfo()">✖</button>
+		<h2>Foto 2</h2>
+		<div class="info-image">
+			<img src="images/pic02.jpg" alt="Foto 2">
+		</div>
+		<p>Meer informatie over afbeelding 2. Dit kan een korte uitleg zijn over waar de foto over gaat.</p>
+		<button class="close-button-bottom" onclick="closeInfo()">Sluiten</button>
+	</div>
+
+	<!-- Panel 3 -->
+	<div class="info-panel" id="info3">
+		<button class="close-btn" onclick="closeInfo()">✖</button>
+		<h2>Foto 3</h2>
+		<div class="info-image">
+			<img src="images/pic03.jpg" alt="Foto 3">
+		</div>
+		<p>Meer informatie over afbeelding 3. Dit kan een korte uitleg zijn over waar de foto over gaat.</p>
+		<button class="close-button-bottom" onclick="closeInfo()">Sluiten</button>
+	</div>
+</section>
+
+<section class="treatments-section">
+	<div class="section-header">
+		<h2>Onze Behandelingen</h2>
+		<p>Klik op een behandeling voor meer informatie</p>
+	</div>
+
+	<div class="treatments-grid">
+
+		<!-- Card 1 -->
+		<div class="treatment-card" onclick="openTreatmentInfo('treatment1')">
+			<img src="images/placeholder01.png" alt="Massage">
+			<div class="overlay">
+				<p>Behandeling 1</p>
+			</div>
+		</div>
+
+		<!-- Card 2 -->
+		<div class="treatment-card" onclick="openTreatmentInfo('treatment2')">
+			<img src="images/placeholder02.png" alt="Personal Training">
+			<div class="overlay">
+				<p>Behandeling 2</p>
+			</div>
+		</div>
+
+		<!-- Card 3 -->
+		<div class="treatment-card" onclick="openTreatmentInfo('treatment3')">
+			<img src="images/placeholder03.png" alt="Voedingsadvies">
+			<div class="overlay">
+				<p>Behandeling 3</p>
+			</div>
+		</div>
+
+		<!-- Card 4 -->
+		<div class="treatment-card" onclick="openTreatmentInfo('treatment4')">
+			<img src="images/placeholder01.png" alt="Fysiotherapie">
+			<div class="overlay">
+				<p>Behandeling 4</p>
+			</div>
+		</div>
+
+		<!-- Card 5 -->
+		<div class="treatment-card" onclick="openTreatmentInfo('treatment5')">
+			<img src="images/placeholder02.png" alt="Revalidatie">
+			<div class="overlay">
+				<p>Behandeling 5</p>
+			</div>
+		</div>
+
+		<!-- Card 6 -->
+		<div class="treatment-card" onclick="openTreatmentInfo('treatment6')">
+			<img src="images/placeholder03.png" alt="Coaching">
+			<div class="overlay">
+				<p>Behandeling 6</p>
+			</div>
+		</div>
+
+	</div>
+</section>
+
+<!-- Info Panels met Sluiten-knop onderaan -->
+
+<div class="treatment-info-panel" id="treatment1">
+	<h2>Behandeling 1</h2>
+	<div class="info-image">
+		<img src="images/pic02.jpg" alt="Foto 2">
+	</div>
+	<p>Meer informatie over behandeling 1. Dit kan een korte uitleg zijn over wat de behandeling inhoud.</p>
+	<button class="close-button-bottom" onclick="closeTreatmentInfo()">Sluiten</button>
+</div>
+
+<div class="treatment-info-panel" id="treatment2">
+	<h2>Behandeling 2</h2>
+	<div class="info-image">
+		<img src="images/pic02.jpg" alt="Foto 2">
+	</div>
+	<p>Meer informatie over behandeling 2. Dit kan een korte uitleg zijn over wat de behandeling inhoud.</p>
+	<button class="close-button-bottom" onclick="closeTreatmentInfo()">Sluiten</button>
+</div>
+
+<div class="treatment-info-panel" id="treatment3">
+	<h2>Behandeling 3</h2>
+	<div class="info-image">
+		<img src="images/pic02.jpg" alt="Foto 2">
+	</div>
+	<p>Meer informatie over behandeling 3. Dit kan een korte uitleg zijn over wat de behandeling inhoud.</p>
+	<button class="close-button-bottom" onclick="closeTreatmentInfo()">Sluiten</button>
+</div>
+
+<div class="treatment-info-panel" id="treatment4">
+	<h2>Behandeling 4</h2>
+	<div class="info-image">
+		<img src="images/pic02.jpg" alt="Foto 2">
+	</div>
+	<p>Meer informatie over behandeling 4. Dit kan een korte uitleg zijn over wat de behandeling inhoud.</p>
+	<button class="close-button-bottom" onclick="closeTreatmentInfo()">Sluiten</button>
+</div>
+
+<div class="treatment-info-panel" id="treatment5">
+	<h2>Behandeling 5</h2>
+	<div class="info-image">
+		<img src="images/pic02.jpg" alt="Foto 2">
+	</div>
+	<p>Meer informatie over behandeling 5. Dit kan een korte uitleg zijn over wat de behandeling inhoud.</p>
+	<button class="close-button-bottom" onclick="closeTreatmentInfo()">Sluiten</button>
+</div>
+
+<div class="treatment-info-panel" id="treatment6">
+	<h2>Behandeling 6</h2>
+	<div class="info-image">
+		<img src="images/pic02.jpg" alt="Foto 2">
+	</div>
+	<p>Meer informatie over behandeling 6. Dit kan een korte uitleg zijn over wat de behandeling inhoud.</p>
+	<button class="close-button-bottom" onclick="closeTreatmentInfo()">Sluiten</button>
+</div>
+
+<section class="reviews-section">
+
+	<!-- Section Header -->
+	<div class="section-header" style="text-align: center;">
+		<h2>Reviews</h2>
+		<p>Verhalen van de klanten</p>
+	</div>
+
+	<!-- Outer Container -->
+	<div class="outerdiv">
+		<div class="innerdiv">
+
+			<!-- Review 1 -->
+			<div class="div1 eachdiv">
+				<div class="userdetails">
+					<div class="detbox">
+						<p class="name">Daniel Clifford</p>
+					</div>
+				</div>
+				<div class="review">
+					<h4>Geweldige ervaring en genezen van mijn blessures</h4>
+					<p>“ I was an EMT for many years before I joined the bootcamp. I’ve been looking to make a
+						transition and have heard some people who had an amazing experience here. I signed up for
+						the free intro course and found it incredibly fun! I enrolled shortly thereafter. The next
+						12 weeks was the best - and most grueling - time of my life. Since completing the course,
+						I’ve successfully switched careers, working as a Software Engineer at a VR startup. ”</p>
+				</div>
+			</div>
+
+			<!-- Review 2 -->
+			<div class="div2 eachdiv">
+				<div class="userdetails">
+					<div class="detbox">
+						<p class="name">Jonathan Walters</p>
+					</div>
+				</div>
+				<div class="review">
+					<h4>The team was very supportive and kept me motivated</h4>
+					<p>“ I started as a total newbie with virtually no coding skills. I now work as a mobile
+						engineer for a big company. This was one of the best investments I’ve made in myself. ”</p>
+				</div>
+			</div>
+
+			<!-- Review 3 -->
+			<div class="div3 eachdiv">
+				<div class="userdetails">
+					<div class="detbox">
+						<p class="name dark">Kira Whittle</p>
+					</div>
+				</div>
+				<div class="review dark">
+					<h4>Such a life-changing experience. Highly recommended!</h4>
+					<p>“ Before joining the bootcamp, I’ve never written a line of code. I needed some structure
+						from professionals who can help me learn programming step by step. I was encouraged to
+						enroll by a former student of theirs who can only say wonderful things about the program.
+						The entire curriculum and staff did not disappoint. They were very hands-on and I never had
+						to wait long for assistance. The agile team project, in particular, was outstanding. It took
+						my learning to the next level in a way that no tutorial could ever have. In fact, I’ve often
+						referred to it during interviews as an example of experience. It certainly helped me land a
+						job as a full-stack 100% recommend! ”</p>
+				</div>
+			</div>
+
+			<!-- Review 4 -->
+			<div class="div4 eachdiv">
+				<div class="userdetails">
+					<div class="detbox">
+						<p class="name dark">Jeanette Harmon</p>
+					</div>
+				</div>
+				<div class="review dark">
+					<h4>An overall wonderful and rewarding experience</h4>
+					<p>“ Thank you for the wonderful experience! I now have a job I really enjoy, and make a good
+						living while doing something I love. ”</p>
+				</div>
+			</div>
+
+			<!-- Review 5 -->
+			<div class="div5 eachdiv">
+				<div class="userdetails">
+					<div class="detbox">
+						<p class="name">Patrick Abrams</p>
+					</div>
+				</div>
+				<div class="review">
+					<h4>Awesome teaching support from TAs who did the bootcamp themselves</h4>
+					<p>“ The staff seem genuinely concerned about my progress which I find really refreshing. The
+						program gave me the confidence necessary to be able to go out in the world and present
+						myself as a capable junior developer. The standard is above the rest. You will get the
+						personal attention you need from an incredible community of smart and amazing people. ”</p>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+</section>
+
+<!-- Divider boven de footer -->
+<div class="row">
+	<div>
+		<svg id="" preserveAspectRatio="xMidYMax meet" class="svg-separator sep6" viewBox="0 0 1600 200"
+			style="display: block; background-color: #EDF2F8;" data-height="200">
+			<polygon class="" style="fill: rgb(108, 122, 137);"
+				points="-4,188.586 174,76 292,124 402,60 536,108 752,8 882,66 990,32 1210,116 1380,64 1536,150 1604,115.09 1604,204 -4,204 ">
+			</polygon>
+			<polygon class="" style="opacity: 1;fill: #95a5a6;" points="174,76 174,78 -4,198 -4,188.586 "></polygon>
+			<polygon class="" style="opacity: 1;fill: #95a5a6;" points="292,124 302,138 402,64 402,60 "></polygon>
+			<polygon class="" style="opacity: 1;fill: #95a5a6;" points="536,108 544,120 752,12 752,8 "></polygon>
+			<polygon class="" style="opacity: 1;fill: #95a5a6;" points="882,66 890,78 990,36 990,32 "></polygon>
+			<polygon class="" style="opacity: 1;fill: #95a5a6;" points="1210,116 1222,130 1380,68 1380,64 "></polygon>
+			<polygon class="" style="opacity: 1;fill: #95a5a6;" points="1536,150 1546,164 1604,124 1604,115.09 ">
+			</polygon>
+			<polygon class="" style="opacity: 1;fill: #34495e;" points="174,76 292,124 282,140 174,78 "></polygon>
+			<polygon class="" style="opacity: 1;fill: #34495e;" points="402,60 536,108 528,120 402,64 "></polygon>
+			<polygon class="" style="opacity: 1;fill: #34495e;" points="752,8 882,66 874,80 752,12 "></polygon>
+			<polygon class="" style="opacity: 1;fill: #34495e;" points="990,32 990,36 1192,130 1210,116 "></polygon>
+			<polygon class="" style="opacity: 1;fill: #34495e;" points="1380,64 1536,150 1526,168 1380,68 "></polygon>
+		</svg>
+	</div>
+</div>
+
+<!-- Footer zelf -->
+<footer id="footer">
+	<ul class="icons" style="margin:0;"> 
+		<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+		<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+		<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+	</ul>
+	<ul class="copyright" style="margin:0;">
+		<li>&copy; Rapunt</li>
+		<li>Gemaakt door: Mike L. Degrassi</a></li>
+	</ul>
+</footer>
