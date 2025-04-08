@@ -36,27 +36,27 @@
 	<section class="photo-gallery">
 		<div class="photos">
 			<div class="photo-card" onclick="openInfo('info1')">
-			  <img src="images/placeholder01.png" alt="Foto 1">
-			  <div class="overlay">
-				<p>Foto 1</p>
-			  </div>
+				<img src="images/placeholder01.png" alt="Foto 1">
+				<div class="overlay">
+					<p>Foto 1</p>
+				</div>
 			</div>
-		  
+
 			<div class="photo-card" onclick="openInfo('info2')">
-			  <img src="images/placeholder02.png" alt="Foto 2">
-			  <div class="overlay">
-				<p>Foto 2</p>
-			  </div>
+				<img src="images/placeholder02.png" alt="Foto 2">
+				<div class="overlay">
+					<p>Foto 2</p>
+				</div>
 			</div>
-		  
+
 			<div class="photo-card" onclick="openInfo('info3')">
-			  <img src="images/placeholder03.png" alt="Foto 3">
-			  <div class="overlay">
-				<p>Foto 3</p>
-			  </div>
+				<img src="images/placeholder03.png" alt="Foto 3">
+				<div class="overlay">
+					<p>Foto 3</p>
+				</div>
 			</div>
-		  </div>
-		  
+		</div>
+
 
 		<!-- Panels -->
 		<div class="info-panel" id="info1">
@@ -342,10 +342,24 @@
 
 <!-- Footer zelf -->
 <footer id="footer">
-	<ul class="icons" style="margin:0;">
-		<li><a href="mailto:jouw@emailadres.nl" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-		<li><a href="tel:+31612345678" class="icon solid fa-phone"><span class="label">Bellen</span></a></li>
-	</ul>
+	<div style="display: flex; align-items: center; justify-content: space-around; gap: 2rem;">
+		<ul class="icons"
+			style="margin: 0; list-style: none; padding: 0; display: flex; flex-direction: column; gap: 1rem;">
+			<li>
+				<a href="mailto:andreagongna@gmail.com" class="icon solid fa-envelope">
+					<span class="label">Email</span>
+				</a>
+			</li>
+			<li>
+				<a href="tel:+31610186583" class="icon solid fa-phone" title="+31 6 10186583">
+					<span class="label">Bellen</span>
+				</a>
+			</li>
+		</ul>
+
+		<img src="/images/visitekaart.png" alt="Profiel" style="width: 100px; height: auto;">
+	</div>
+
 	<ul class="copyright" style="margin:0;">
 		<li>&copy; Rapunt</li>
 		<li>Gemaakt door: Mike L. Degrassi</a></li>
