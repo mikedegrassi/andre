@@ -139,6 +139,8 @@
 				descElement.textContent = descriptionText;
 				descElement.style.opacity = '1';
 				descElement.style.transform = 'translateY(0)';
+				descElement.style.zIndex = '10';
+				descElement.style.display = 'block';
 
 				const scrollIndicator = document.getElementById('scrollIndicator');
 				scrollIndicator.style.display = 'flex';
@@ -183,6 +185,8 @@
 				const descElement = document.getElementById('descriptionText');
 				descElement.style.opacity = '0';
 				descElement.style.transform = 'translateY(-20px)';
+				descElement.style.zIndex = '-1';
+				descElement.style.display = 'none';
 
 				// Hide scroll indicator
 				const scrollIndicator = document.getElementById('scrollIndicator');
