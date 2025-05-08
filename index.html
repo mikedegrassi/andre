@@ -274,6 +274,9 @@ window.addEventListener('scroll', () => {
 		});
 
 		function makeMainBanner(imageFile, title) {
+
+			window.scrollTo({ top: 0, behavior: 'instant' });
+
 			document.getElementById('banner').style.backgroundImage = `url('./assets/css/images/${imageFile}')`;
 			document.getElementById('banner').style.backgroundSize = 'cover';
 			document.getElementById('banner').style.backgroundPosition = 'center';
