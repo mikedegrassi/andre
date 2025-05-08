@@ -136,6 +136,9 @@
 <!-- Info panels -->
 <div class="treatment-info-panel" id="treatment1">
 	<h2>Sportmassage</h2>
+	<div class="info-image">
+		<img src="images/pic03.jpg" alt="Foto 3">
+	</div>
 	<p>Onze sportmassages zorgen voor bevordering van het spierherstel, het voorkomen van blessures en verbetering van
 		de conditie.
 		Door gespecialiseerde technieken worden de doorbloedingen in de spieren gestimuleerd, waardoor de afvalstoffen
@@ -148,6 +151,9 @@
 
 <div class="treatment-info-panel" id="treatment2">
 	<h2>Blessure Behandeling</h2>
+	<div class="info-image">
+		<img src="images/pic03.jpg" alt="Foto 3">
+	</div>
 	<p>Blessures kunnen snel ontstaan door overbelasting, een verkeerde beweging of een langdurige spanning op de spieren of gewrichten. 
 		Onze blessurebehandeling is speciaal gericht op de lichamelijke klachten die er worden ervaren. Zo wordt er eerst gekeken naar de oorzaak en aard van de klacht, zodat er een goede behandeling kan worden opgesteld.
 		Met de massage en wellicht nodige oefeningen, verminderen we de pijn en verbeteren we de beweeglijkheid van het lichaam. 
@@ -157,6 +163,9 @@
 
 <div class="treatment-info-panel" id="treatment3">
 	<h2>Dry-needling</h2>
+	<div class="info-image">
+		<img src="images/pic03.jpg" alt="Foto 3">
+	</div>
 	<p>Dry-needling is een behandelmethode waarbij dunne, steriele naalden worden gebruikt om spierknopen te ontspannen.
 		Het werkt direct in op verkrampte spieren om pijn en stijfheid te verminderen.
 		Wanneer de naald in de spierknoop wordt geprikt, zal de spier zich kort aanspannen en vervolgens ontspannen. Dit
@@ -171,6 +180,9 @@
 
 <div class="treatment-info-panel" id="treatment4">
 	<h2>Manuele Lymfe-drainage</h2>
+	<div class="info-image">
+		<img src="images/pic03.jpg" alt="Foto 3">
+	</div>
 	<p>Manuele lymfedrainage is een zachte, ritmische massagetechniek die gericht is op het stimuleren van het
 		lymfestelsel.
 		Met langzame, pompende bewegingen wordt de doorstroming van lymfevocht gestimuleerd. Dit helpt bij het
@@ -185,6 +197,9 @@
 
 <div class="treatment-info-panel" id="treatment5">
 	<h2>Reflex Massage</h2>
+	<div class="info-image">
+		<img src="images/pic03.jpg" alt="Foto 3">
+	</div>
 	<p>Met onze reflex massages stimuleren we het zelfherstellend vermogen van het lichaam. Er wordt hier gefocust op de reflexzones in het lichaam die in verbinding staan met de spieren, gewrichten, organen en andere lichaamsdelen. 
 		Door op deze gebieden een zachte tot stevige druk uit te oefenen, kan de doorbloeding gaan verbeteren, energiedoorstroming worden bevorderd en de spanning in het lichaam worden afgenomen. 
 		De massage is een natuurlijke en doeltreffende methode om zowel het lichaam als de geest terug in balans te brengen. 
@@ -194,6 +209,9 @@
 
 <div class="treatment-info-panel" id="treatment6">
 	<h2>Hot Stone Massage</h2>
+	<div class="info-image">
+		<img src="images/pic03.jpg" alt="Foto 3">
+	</div>
 	<p>De hot stone massage heeft zowel een ontspannende als herstellende werking.
 		De stenen, met een graden van ongeveer 45, worden op specifieke punten van het lichaam geplaatst. Zo worden hier
 		de stenen ook gebruikt om mee te masseren.
@@ -344,17 +362,32 @@
 
 <!-- Footer zelf -->
 <footer id="footer">
-	<ul class="icons" style="margin:0;">
-		<li><a href="mailto:andreagongna@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a>
-		</li>
-		<li>
-			<a href="tel:+31610186583" class="icon solid fa-phone" title="+31 6 10186583">
-				<span class="label">Bellen</span>
-			</a>
-		</li>
+	<div style="display: flex; align-items: center; justify-content: center; gap: 2rem; margin: 20px;">
+		<ul class="icons"
+			style="margin: 0; list-style: none; padding: 0; display: flex; flex-direction: column; gap: 1rem;">
+			<li style="padding:0;">
+				<a href="mailto:andreagongna@gmail.com" class="icon solid fa-envelope">
+					<span class="label">Email</span>
+				</a>
+			</li>
+			<li style="padding:0;">
+				<a href="tel:+31610186583" class="icon solid fa-phone" title="+31 6 10186583">
+					<span class="label">Bellen</span>
+				</a>
+			</li>
+		</ul>
 
+		<!-- De originele afbeelding -->
+<img src="/images/visitekaart.png" alt="Profiel" class="zoomable-image" style="width: 150px; height: auto; border-radius: 10px;" onclick="openLightbox(this.src)">
 
-	</ul>
+<!-- Lightbox container -->
+<div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+  <span class="lightbox-close" onclick="closeLightbox(event)"><i class="fas fa-times"></i></span>
+  <img id="lightbox-img" src="" alt="Vergrote afbeelding">
+</div>
+
+	</div>
+
 	<ul class="copyright" style="margin:0;">
 		<li>&copy; Rapunt</li>
 		<li>Gemaakt door: Mike L. Degrassi</a></li>
