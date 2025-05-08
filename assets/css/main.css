@@ -3129,6 +3129,7 @@ body {
 	align-items: center;
 	display: flex;
 	justify-content: space-between;
+	padding: 60px 0;
 	/* ruimte tussen content en image */
 
 	background: #f7f7f7;
@@ -3285,7 +3286,7 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	padding: 60px 20px;
-	background-color: #EDF2F8;
+	background-color: #f7f7f7;
 	/* zelfde kleur als outerdiv */
 }
 
@@ -3464,7 +3465,7 @@ body {
 
 .treatments-section {
 	padding: 60px 20px;
-	background-color: #f7f7f7;
+	background-color:  #EDF2F8;
 	text-align: center;
 }
 
@@ -3609,7 +3610,7 @@ body {
 .outerdiv {
 	width: 100%;
 	min-height: 100vh;
-	background: #EDF2F8;
+	background: #f7f7f7;
 	display: flex;
 	align-items: start;
 	justify-content: center;
@@ -4686,7 +4687,7 @@ body.is-menu-visible #menu {
 	-ms-transition: -ms-transform 0.5s ease, opacity 0.5s ease;
 	transition: transform 0.5s ease, opacity 0.5s ease;
 	display: inline-block;
-	font-size: 1.75em;
+	font-size: 1.8em;
 	opacity: 1;
 	padding: 0.35em 1em;
 	position: relative;
@@ -4776,7 +4777,7 @@ body.is-menu-visible #menu {
 	}
 
 	#banner h2 {
-		font-size: 1.25em;
+		font-size: 1.1em;
 	}
 
 	#banner br {

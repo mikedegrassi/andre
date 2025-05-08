@@ -81,7 +81,7 @@
 	  </style>
 
 	<style>
-		.entry-title {
+		.entry-logo {
 			text-align: center;
 			font-size: 2.5em;
 			margin-top: 40px;
@@ -104,7 +104,7 @@
 			text-align: center;
 			cursor: pointer;
 			transition: transform 0.3s;
-			width: 35%;
+			width: 40%;
 		}
 
 		.option:hover {
@@ -195,10 +195,24 @@
 			pointer-events: auto;
 		}
 
+		.entry-logo {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+
+  .entry-logo img {
+    max-width: 350px;
+    height: auto;
+  }
+
+  @media screen and (max-width: 768px) {
+    .entry-logo img {
+      max-width: 180px;
+    }
+  }
+
 		@media screen and (max-width: 768px) {
-			.entry-title {
-				font-size: 1.5em;
-			}
 
 			.banner-options {
 				flex-direction: column;
@@ -236,7 +250,9 @@
 <body class="landing">
 	<div id="page-wrapper">
 		<section id="banner" class="custom-banner" style="background-color: #EDF2F8; transition: background-image 0.5s ease-in-out;">
-			<h1 class="entry-title">Welke pagina wilt u bezoeken?</h1>
+			<div class="entry-logo">
+				<img src="./assets/css/images/logo.png" alt="Rapunt Logo" />
+			  </div>			  
 			<div class="banner-options">
 				<div class="option" onclick="makeMainBanner('Andre massage ervaring.png', 'Massage'); loadContent('massage.html');">
 					<h2>Massage</h2>
@@ -283,11 +299,11 @@ window.addEventListener('scroll', () => {
 			document.getElementById('banner').style.height = '100vh';
 
 			document.querySelector('.banner-options').style.opacity = '0';
-			document.querySelector('.entry-title').style.opacity = '0';
+			document.querySelector('.entry-logo').style.opacity = '0';
 
 			setTimeout(() => {
 				document.querySelector('.banner-options').style.display = 'none';
-				document.querySelector('.entry-title').style.display = 'none';
+				document.querySelector('.entry-logo').style.display = 'none';
 				document.getElementById('header-title').innerText = title;
 				document.getElementById('header-title').style.display = 'block';
 				document.getElementById('back-button').style.display = 'block';
@@ -322,18 +338,18 @@ window.addEventListener('scroll', () => {
 				document.getElementById('banner').style.backgroundImage = '';
 				document.getElementById('banner').style.height = '';
 				document.querySelector('.banner-options').style.display = 'flex';
-				document.querySelector('.entry-title').style.display = 'block';
+				document.querySelector('.entry-logo').style.display = 'block';
 				document.getElementById('header-title').style.display = 'none';
 				document.getElementById('intro-text').style.display = 'none';
 				document.getElementById('back-button').style.display = 'none';
 				document.getElementById("dynamic-content").innerHTML = '';
 
 				document.querySelector('.banner-options').style.opacity = '0';
-				document.querySelector('.entry-title').style.opacity = '0';
+				document.querySelector('.entry-logo').style.opacity = '0';
 
 				setTimeout(() => {
 					document.querySelector('.banner-options').style.opacity = '1';
-					document.querySelector('.entry-title').style.opacity = '1';
+					document.querySelector('.entry-logo').style.opacity = '1';
 					document.getElementById('header-title').style.transform = 'translateY(0)';
 					document.getElementById('intro-text').style.transform = 'translateX(0)';
 					document.getElementById('intro-text').style.opacity = '1';
